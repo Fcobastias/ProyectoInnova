@@ -8,7 +8,8 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -28,9 +29,11 @@ html, body {
 }
 
 .hero-sealai .title.has-text-primary {
-  color: #4a3f8b!important; /* azul-morado, combina con el botón */
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  color: #4a3f8b !important;
+  /* azul-morado, combina con el botón */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
+
 
 /* Figuras irregulares */
 .hero-sealai::before,
@@ -58,7 +61,8 @@ html, body {
 }
 
 /* Efecto de líneas estilo tech/validación */
-.hero-sealai::before, .hero-sealai::after {
+.hero-sealai::before,
+.hero-sealai::after {
   mix-blend-mode: multiply;
 }
 
@@ -66,11 +70,15 @@ html, body {
 .hero-sealai .button.is-primary {
   background: linear-gradient(45deg, #667eea, #764ba2);
   border: none;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .hero-sealai .button.is-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.video-box {
+  border-radius: 12px;
 }
