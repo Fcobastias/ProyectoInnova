@@ -13,6 +13,15 @@ body {
   height: 100%;
 }
 
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.section.hero-sealai {
+  flex: 1;
+}
+
 .hero {
   padding: 1.5rem;
 }
@@ -42,6 +51,8 @@ body {
   position: absolute;
   border-radius: 50%;
   opacity: 0.3;
+  z-index: 0;              /* Manda los círculos al fondo */
+  pointer-events: none;    /* Evita que bloqueen clics */
 }
 
 .hero-sealai::before {
@@ -81,4 +92,9 @@ body {
 
 .video-box {
   border-radius: 12px;
+}
+
+.hero-sealai .has-text-centered {
+  position: relative;
+  z-index: 1;              /* Asegura que el texto y botón estén encima */
 }
