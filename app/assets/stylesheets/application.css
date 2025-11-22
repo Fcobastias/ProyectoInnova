@@ -98,3 +98,24 @@ body {
   position: relative;
   z-index: 1;              /* Asegura que el texto y botón estén encima */
 }
+
+/* Scroll horizontal SOLO para la tabla */
+.table-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Asegura que la card no se expanda más que la pantalla */
+.card {
+  max-width: 100%;
+}
+
+.panel-table-container {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.panel-table {
+  min-width: 700px; /* fuerza que la tabla sea más ancha que la pantalla en mobile */
+}

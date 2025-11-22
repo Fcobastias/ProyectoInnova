@@ -4,24 +4,33 @@
     <div class="card">
       <div class="card-content">
         <div class="registry inline-registry">
-          <p class="has-text-weight-bold">Código producto</p>
-          <p>0810.4021</p>
+          <p class="has-text-weight-bold">Producto identificado</p>
+          <p>Cerezas Lapins</p>
         </div>
         <div class="registry mt-2 inline-registry">
-          <p class="has-text-weight-bold">Estado sello</p>
-          <p>OK</p>
+          <p class="has-text-weight-bold">Estado de conservación</p>
+          <p>Bueno</p>
+        </div>
+        <div class="registry mt-2 inline-registry">
+          <p class="has-text-weight-bold">Tiempo estimado de vida</p>
+          <p>43 días</p>
         </div>
         <div class="registry mt-2">
-          <p class="has-text-weight-bold">Detalle:</p>
-          <p>Arándanos orgánicos</p>
+          <p class="has-text-weight-bold">Evaluación general</p>
+          <p>En buen estado y a tiempo para llegar a su destino.</p>
         </div>
-        <div class="registry mt-2">
-          <p class="has-text-weight-bold">Situación actualizada:</p>
-          <p>Marcado como bien recepcionado y en camino a destino. Situación actualizada para el exportador.</p>
-        </div>
+
+        <hr>
+
+        <p class="card-footer-text">
+          Información actualizada en base de datos. Código CL9029-2102
+        </p>
       </div>
     </div>
     <%= link_to "Volver al inicio", root_path, class: "button is-primary mt-4" %>
+    <div class="mt-2">
+      <%= link_to "Reportar un problema", "#", class: "button is-small is-light" %>
+    </div>
   </div>
 </section>
 
@@ -36,4 +45,9 @@
   text-align: left;
 }
 
+.card-footer-text {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  color: #9a9a9a;
+}
 </style>

@@ -1,0 +1,60 @@
+<section class="hero hero-sealai is-fullheight">
+  <div class="hero-body">
+    <div class="container">
+
+      <div class="card p-5">
+        <h1 class="title is-4 mb-4">Panel de empresa</h1>
+
+        <div class="table-container panel-table-container">
+            <table class="table is-striped is-hoverable panel-table">
+            <thead>
+              <tr>
+                <th>Código</th>
+                <th>Detalle</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% productos = [
+                ["CL1234-5678", "Cereza", "OK"],
+                ["FR4321-9823", "Nectarines", "Revisar"],
+                ["AP5566-1039", "Manzana Fuji", "OK"],
+                ["PE8492-3321", "Pera Packham", "OK"],
+                ["OR2299-5566", "Naranja", "Revisar"],
+                ["KI9988-1112", "Kiwi", "OK"],
+                ["UV6677-8890", "Uva Red Globe", "OK"],
+                ["LM1029-4488", "Limón", "Revisar"],
+                ["PL7744-6655", "Ciruela", "OK"],
+                ["CH3301-9922", "Cereza Bing", "OK"],
+                ["MA2134-9044", "Mandarina", "Revisar"],
+                ["PA5567-2201", "Palta Hass", "OK"],
+                ["GR8210-7731", "Granada", "OK"],
+                ["ST9912-6642", "Frutilla", "Revisar"],
+                ["ME4329-5510", "Melón", "OK"]
+              ] %>
+
+              <% productos.each do |codigo, detalle, estado| %>
+                <tr>
+                  <td><strong><%= codigo %></strong></td>
+                  <td><%= detalle %></td>
+                  <td>
+                    <span class="tag <%= estado == 'OK' ? 'is-success' : 'is-warning' %>">
+                      <%= estado %>
+                    </span>
+                  </td>
+                  <td>
+                    <a class="button is-small is-danger">Descargar PDF</a>
+                    <a class="button is-small is-info">Editar</a>
+                  </td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>

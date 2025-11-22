@@ -5,7 +5,7 @@
   <div class="container has-text-centered" style="position:relative; z-index:1;">
     <%= link_to "← Volver", root_path, class: "button is-primary is-small mb-4" %>
 
-    <h1 class="title is-3 has-text-centered has-text-primary">Validar Sello</h1>
+    <h1 class="title is-3 has-text-centered has-text-primary">Validar Producto</h1>
     <p class="subtitle is-6 has-text-centered">Concede acceso a tu cámara para comenzar.</p>
 
     <div class="box" style="max-width:720px; margin:0 auto; position:relative; border-radius:12px;">
@@ -64,13 +64,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
     video.srcObject = stream;
     await video.play();
-    statusEl.textContent = 'Cámara habilitada. Escanee el sello.';
+    statusEl.textContent = 'Cámara habilitada. Escanee el producto.';
 
     loader.classList.add('is-hidden-flex');
 
     setTimeout(() => {
         loader.classList.remove('is-hidden-flex');
-        statusEl.textContent = 'Sello leido. Procesando imagen con el modelo de IA…';
+        statusEl.textContent = 'Producto escaneado. Procesando imagen con el modelo de IA…';
 
         // Congelar frame
         const canvas = document.createElement('canvas');

@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get "validar", to: "seals#new", as: :validar_sello
   get "resultado", to: "seals#result", as: :resultado_sello
 
+  get "panel-empresa", to: "empresa#panel", as: :panel_empresa
+
   # Render dynamic PWA files from app/views/pwa/* (remember to link manifest in application.html.erb)
   # get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
