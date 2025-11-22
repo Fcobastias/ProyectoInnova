@@ -2,11 +2,11 @@
   <div class="hero-body">
     <div class="container">
 
-      <div class="card p-5">
+      <div class="card panel-card">
         <h1 class="title is-4 mb-4">Panel de empresa</h1>
 
-        <div class="table-container panel-table-container">
-            <table class="table is-striped is-hoverable panel-table">
+        <div class="panel-table-wrapper">
+          <table class="table is-striped is-hoverable panel-table">
             <thead>
               <tr>
                 <th>Código</th>
@@ -43,7 +43,7 @@
                       <%= estado %>
                     </span>
                   </td>
-                  <td>
+                  <td class="acciones-cell">
                     <a class="button is-small is-danger">Descargar PDF</a>
                     <a class="button is-small is-info">Editar</a>
                   </td>
@@ -53,8 +53,55 @@
           </table>
         </div>
 
+        <p class="scroll-hint">
+          Desliza horizontalmente para ver más →
+        </p>
+
       </div>
 
     </div>
   </div>
 </section>
+
+<style>
+.panel-card {
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* CONTENEDOR CON SCROLL X + Y */
+.panel-table-wrapper {
+  width: 100%;
+  max-height: 60vh;      /* aquí controlas la altura visible */
+  overflow-x: auto;
+  overflow-y: auto;
+  border-radius: 8px;
+}
+
+/* Forzar ancho horizontal */
+.panel-table {
+  min-width: 900px;
+  width: 100%;
+}
+
+.acciones-cell {
+  white-space: nowrap;
+}
+
+.scroll-hint {
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  color: #999;
+  text-align: right;
+}
+
+.panel-table-wrapper {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Prevención de quiebres */
+.hero-sealai .container {
+  max-width: 100%;
+}
+</style>
